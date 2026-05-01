@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="learningCsharp.Core/learningCsharp.Core.csproj" />
+  <Project Path="learningCsharp.Tests/learningCsharp.Tests.csproj" />
+</Solution>

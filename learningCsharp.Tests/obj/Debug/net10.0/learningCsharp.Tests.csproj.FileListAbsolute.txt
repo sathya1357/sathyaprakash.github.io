@@ -642,3 +642,4 @@ C:\Users\sathy\learningCsharp\learningCsharp.Tests\bin\Debug\net10.0\.msCoverage
 C:\Users\sathy\learningCsharp\learningCsharp.Tests\bin\Debug\net10.0\CoverletSourceRootsMapping_learningCsharp.Tests
 C:\Users\sathy\learningCsharp\learningCsharp.Tests\bin\Debug\net10.0\learningCsharp.Core.dll
 C:\Users\sathy\learningCsharp\learningCsharp.Tests\bin\Debug\net10.0\learningCsharp.Core.pdb
+C:\Users\sathy\learningCsharp\learningCsharp.Tests\obj\Debug\net10.0\learningCsharp.Tests.sourcelink.json
