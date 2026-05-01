@@ -1,0 +1,12 @@
+{
+  "version": 2,
+  "dgSpecHash": "0sWRFUPe9xM=",
+  "success": true,
+  "projectFilePath": "C:\\Users\\sathy\\learningCsharp\\learningCsharp.Core\\learningCsharp.Core.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\sathy\\.nuget\\packages\\microsoft.bcl.asyncinterfaces\\6.0.0\\microsoft.bcl.asyncinterfaces.6.0.0.nupkg.sha512",
+    "C:\\Users\\sathy\\.nuget\\packages\\microsoft.playwright\\1.59.0\\microsoft.playwright.1.59.0.nupkg.sha512",
+    "C:\\Users\\sathy\\.nuget\\packages\\system.componentmodel.annotations\\5.0.0\\system.componentmodel.annotations.5.0.0.nupkg.sha512"
+  ],
+  "logs": []
+}
