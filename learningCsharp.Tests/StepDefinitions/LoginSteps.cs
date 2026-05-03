@@ -10,12 +10,16 @@ namespace learningCsharp.Tests.StepDefinitions
         private readonly LoginPage _loginPage;
         private readonly DashboardPage _dashboardPage;
         private readonly PfValidation _pfValidation;
+        private readonly AddEmployee _addEmployee;
+        private readonly ScenarioContext _scenarioContext;
 
-        public LoginSteps(LoginPage loginPage, DashboardPage dashboardPage, PfValidation pfValidation)
+        public LoginSteps(LoginPage loginPage, DashboardPage dashboardPage, PfValidation pfValidation, AddEmployee addEmployee, ScenarioContext scenarioContext)
         {
             _loginPage = loginPage;
             _dashboardPage = dashboardPage;
             _pfValidation = pfValidation;
+            _addEmployee = addEmployee;
+            _scenarioContext = scenarioContext;
         }
 
         [Given(@"user navigates to login page")]
@@ -50,8 +54,27 @@ namespace learningCsharp.Tests.StepDefinitions
             string empSalary = await _pfValidation.GetEmployeeSalaryAsync();
             Console.WriteLine($"Employee Name: {empName}, Employee Salary: {empSalary}");
 
+            // Store in ScenarioContext for use in other steps or reports
+            _scenarioContext["EmployeeName"] = empName;
+            _scenarioContext["EmployeeSalary"] = empSalary;
+
             Assert.AreEqual("John Doe", empName);
             Assert.AreEqual("₹ 10,000.00", empSalary);
+        }
+        [Then(@"the user add new employee details")]
+        public async Task ThenTheUserAddNewEmployeeDetails()
+        {
+            string firstName = "John"; 
+            string lastName = "Doe";
+
+            // Store in ScenarioContext for tracking
+            _scenarioContext["NewEmployeeFirstName"] = firstName;
+            _scenarioContext["NewEmployeeLastName"] = lastName;
+
+            // Implement the logic to add new employee details
+            await _addEmployee.AddNewEmployeeAsync(firstName, lastName);
+            
+            Console.WriteLine($"New employee added: {firstName} {lastName}");
         }
 
     }
